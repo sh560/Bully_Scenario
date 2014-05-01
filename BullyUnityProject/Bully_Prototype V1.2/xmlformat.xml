@@ -1,0 +1,12 @@
+<doc>
+	<dialog name = "D001">
+		<content></content>
+	</dialog>
+	<question name = "Q001">
+		<numAnswer></numAnswer>
+		<content></content>
+		<1></1>
+		<2></2>
+		...
+	</question>
+</doc>

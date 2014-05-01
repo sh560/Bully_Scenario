@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="assets\Scripts\Levels_Load.cs">
+    <Files>
+      <File FileName="assets\Scripts\GameManager.cs" Line="38" Column="2" />
+      <File FileName="assets\Scripts\QuestSelect.cs" Line="58" Column="4" />
+      <File FileName="assets\Scripts\CountdownTimer.cs" Line="17" Column="3" />
+      <File FileName="assets\Scripts\Questions.cs" Line="96" Column="23" />
+      <File FileName="assets\Scripts\Levels_Load.cs" Line="17" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -2,27 +2,72 @@
 <!--Could possibly use the tag to link this via a unity tag to the correct level-->
 <Level name="Lake" tag="LakeLevel">
 	<!--Name here can be used as an ID to determine where it will go-->
-	<Quest name="Someone Being Verbally Bullied" id=0>
+	<Quest name="Someone Being Verbally Bullied" id="0">
 		<Dialogue>Your friend max is being verbally bullied by three others because he has glasses.</Dialogue>
 		<!--Still working on how we should handle multiple answers but I think this will work.
 		Add more/less answer tags and change the number so you know how many to look for.-->
 		<Question>What should you do when someone is being verbally bullied?</Question>
+		<CorrectAnswer>1</CorrectAnswer>
 		<Answer>
-			<text>"Leave them alone."</text>
+			<Text>"Leave them alone."</Text>
 			<Description>Sometimes non avoidance is the best policy.</Description>
 		</Answer>
-		<Answer>Throw sand at them.</Answer>
-		<Answer>Verbally bully the bullyers.</Answer>
-		<Answer>Tell a camp counsellor.</Answer>
+		<Answer>
+			<Text>"Leave them alone."</Text>
+			<Description>Sometimes non avoidance is the best policy.</Description>
+		</Answer>
+		<Answer>
+			<Text>"Leave them alone."</Text>
+			<Description>Sometimes non avoidance is the best policy.</Description></Answer>
+		<Answer>
+			<Text>"Leave them alone."</Text>
+			<Description>Sometimes non avoidance is the best policy.</Description>
+		</Answer>
 	</Quest>
-	<Quest name="Someone Being Physically Bullied" id=1>
+	<Quest name="Someone Being Physically Bullied" id="1">
 		<Dialogue>Your friend max is being physically bullied by three others because he has glasses.</Dialogue>
 		<!--Still working on how we should handle multiple answers but I think this will work.
 		Add more/less answer tags and change the number so you know how many to look for.-->
+		<CorrectAnswer>2</CorrectAnswer>
 		<Question>What should you do when someone is being physically bullied?</Question>
-		<Answer>Stay away and keep watching with popcorn in hand.</Answer>
-		<Answer>Run Away.</Answer>
-		<Answer>Try and use your karate moves on the bullys.</Answer>
-		<Answer>Eat a sandwhich.</Answer>
+		<CorrectAnswer>1</CorrectAnswer>
+		<Answer>
+			<Text>"Leave them alone."</Text>
+			<Description>Sometimes non avoidance is the best policy.</Description>
+		</Answer>
+		<Answer>
+			<Text>"Leave them alone."</Text>
+			<Description>Sometimes non avoidance is the best policy.</Description>
+		</Answer>
+		<Answer>
+			<Text>"Leave them alone."</Text>
+			<Description>Sometimes non avoidance is the best policy.</Description></Answer>
+		<Answer>
+			<Text>"Leave them alone."</Text>
+			<Description>Sometimes non avoidance is the best policy.</Description>
+		</Answer>
+	</Quest>
+	<Quest name="Someone Being Physically Bullied" id="2">
+		<Dialogue>Your friend max is being physically bullied by three others because he has glasses.</Dialogue>
+		<!--Still working on how we should handle multiple answers but I think this will work.
+		Add more/less answer tags and change the number so you know how many to look for.-->
+		<CorrectAnswer>2</CorrectAnswer>
+		<Question>What should you do when someone is being physically bullied?</Question>
+		<CorrectAnswer>1</CorrectAnswer>
+		<Answer>
+			<Text>"Leave them alone."</Text>
+			<Description>Sometimes non avoidance is the best policy.</Description>
+		</Answer>
+		<Answer>
+			<Text>"Leave them alone."</Text>
+			<Description>Sometimes non avoidance is the best policy.</Description>
+		</Answer>
+		<Answer>
+			<Text>"Leave them alone."</Text>
+			<Description>Sometimes non avoidance is the best policy.</Description></Answer>
+		<Answer>
+			<Text>"Leave them alone."</Text>
+			<Description>Sometimes non avoidance is the best policy.</Description>
+		</Answer>
 	</Quest>
 </Level>

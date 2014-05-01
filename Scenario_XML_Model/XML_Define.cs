@@ -5,12 +5,14 @@ using System.IO;
 using System.Xml;
 using System.Xml.Serialization;
 
-[XmlRoot("LevelCollection")]
+[XmlRoot("Level")]
 public class LevelContainer{
 
-	[XmlElement("Level")]
-	public Level[] Levels;
+	[XmlElement("Quest")]
+	public Level[] Quests;
 
+    [XmlAttribute("name")]
+    public string name;
 	//public List<Level> Levels = new List<Level>();
 
 	public static LevelContainer Load(string path){
@@ -22,25 +24,27 @@ public class LevelContainer{
 
 	}	
 }
-public class Level{
-	[XmlAttribute("name")]
-	public string name;
-
-
-	[XmlElement("Quest")]
-	public Quest[] Quests;
-}
 
 public class Quest{
 	[XmlAttribute("name")]
 	public string name;
 
+    [XmlElement("CorrectAnswer")]
+    public int correctAnswer;
+
 	[XmlElement("Dialogue")]
 	public string dialogue;
 
-	[XmlElement("NumAnswers")]
-	public int numAnswers;
+    [XmlElement("Answer")]
+    public Answer[] Answers;
+}
 
-	[XmlElement("Answer")]
-	public string[] Answers;
+public class Answer
+{
+    [XmlElement("Text")]
+    public string text;
+
+    [XmlElement("Description")]
+    public string description;
+
 }

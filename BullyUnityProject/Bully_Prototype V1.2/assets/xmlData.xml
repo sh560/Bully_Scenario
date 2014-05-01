@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Doc>
+	<!--Potential for multiple levels-->
+	<Levels>
+		<Level name="1">
+			<!--Name here can be used as an ID to determine where it will go-->
+			<Quest name="001">
+				<Dialogue>This is the dialogue that will be appearing. The text will show up here for the question and any dialogue that is needed. Possibly some animation in the future.</Dialogue>
+				<!--Still working on how we should handle multiple answers but I think this will work.
+				Add more/less answer tags and change the number so you know how many to look for.-->
+				<NumAnswers>4</NumAnswers>
+				<Question>The question will go here.</Question>
+				<Answer>The first answer.</Answer>
+				<Answer>The second answer.</Answer>
+				<Answer>The third answer.</Answer>
+				<Answer>The fourth answer.</Answer>
+			</Quest>
+			<Quest name="002">
+				<Dialogue>This is the dialogue that will be appearing. The text will show up here for the question and any dialogue that is needed. Possibly some animation in the future.</Dialogue>
+				<!--Still working on how we should handle multiple answers but I think this will work.
+				Add more/less answer tags and change the number so you know how many to look for.-->
+				<NumAnswers>4</NumAnswers>
+				<Question>The question will go here.</Question>
+				<Answer>The first answer.</Answer>
+				<Answer>The second answer.</Answer>
+				<Answer>The third answer.</Answer>
+				<Answer>The fourth answer.</Answer>
+			</Quest>
+	</Level>
+		<Level name="2">
+			<!--Name here can be used as an ID to determine where it will go-->
+			<Quest name="001">
+				<Dialogue>This is the dialogue that will be appearing. The text will show up here for the question and any dialogue that is needed. Possibly some animation in the future.</Dialogue>
+				<!--Still working on how we should handle multiple answers but I think this will work.
+				Add more/less answer tags and change the number so you know how many to look for.-->
+				<NumAnswers>4</NumAnswers>
+				<Question>The question will go here.</Question>
+				<Answer>The first answer.</Answer>
+				<Answer>The second answer.</Answer>
+				<Answer>The third answer.</Answer>
+				<Answer>The fourth answer.</Answer>
+			</Quest>
+			<Quest name="002">
+				<Dialogue>This is the dialogue that will be appearing. The text will show up here for the question and any dialogue that is needed. Possibly some animation in the future.</Dialogue>
+				<!--Still working on how we should handle multiple answers but I think this will work.
+				Add more/less answer tags and change the number so you know how many to look for.-->
+				<NumAnswers>4</NumAnswers>
+				<Question>The question will go here.</Question>
+				<Answer>The first answer.</Answer>
+				<Answer>The second answer.</Answer>
+				<Answer>The third answer.</Answer>
+				<Answer>The fourth answer.</Answer>
+			</Quest>
+		</Level>
+	</Levels>
+</Doc>

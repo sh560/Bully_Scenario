@@ -31,11 +31,15 @@ public class Quest{
 	
 	[XmlElement("CorrectAnswer")]
 	public int correctAnswer;
+
 	[XmlElement("Question")]
 	public string question;
 
 	[XmlElement("Dialogue")]
 	public string dialogue;
+
+	[XmlElement("Advice")]
+	public string advice;
 	
 	[XmlElement("Answer")]
 	public Answer[] Answers;
@@ -48,5 +52,8 @@ public class Answer
 	
 	[XmlElement("Description")]
 	public string description;
+
+	[XmlElement("Response")]
+	public string[] Response;
 	
 }

@@ -31,8 +31,8 @@ public class GameManager : MonoBehaviour {
 	public static AudioClip[][] AudioResponse = new AudioClip[3][];
 
 	public string xmlPath;
-	public Level levelDoc;
-	public Quest[] QuestInfo;
+	public static Level levelDoc;
+	public static Quest[] QuestInfo;
 
 
 
@@ -83,21 +83,7 @@ public class GameManager : MonoBehaviour {
 			AudioResponse[1] = new AudioClip [8];
 			AudioResponse[2] = new AudioClip [8];
 
-			//Quests[0] = "A girl/boy is kayaking at the lake, and suddenly a group of kids surrounded him/her and started splashing water with their paddles. The victim asked them to stop, but they didn't. What will you do?";
-			//Quests[1] = "During the camp, you got mentioned on Facebook. There's a girl/boy whose wall has hateful messages all over it. Other people either kept adding on to it or just stood by and did nothing. What action would you take?";
-			//Quests[2] = "Two female campers were in a heated argument, others were just gathering around them, watching. The argument soon turned into a fight where the two slapped and pulled each others' hair as you passed by. What will you do?";
-			/*Answers[0][0] = "Threaten to send the ones bullying home early";
-			Answers[0][1] = "Jump into the water and safe the victim";
-			Answers[0][2] = "Yell at the bullies to stop from the side";
-			Answers[0][3] = "Tell everyone there is a shark in the water";
-			Answers[1][0] = "Report Spam on Facebook.";
-			Answers[1][1] = "Comment on the post and ask the bullies to stop.";
-			Answers[1][2] = "Come up to the bully in person and confront them. ";
-			Answers[1][3] = "Comment on the post and join the crowd.";
-			Answers[2][0] = "Calm them down.";
-			Answers[2][1] = "Get everyone's attention at the camp to witness the scenario.";
-			Answers[2][2] = "Take a video of it and upload it to facebook so everyone can see as evidence.";
-			Answers[2][3] = "Jump in to the scene and stop the fight.";*/
+
 			Lifeline[0][0] = "There is more than one right answer, but I think one of the answers is to first think I would try in a scenario like this. I would try talking to the bullies and hope they will respect and listen to people in authority.";
 			Lifeline[0][1] = "There are many ways to solve this situation but there is one option that seems to be better than the rest. If I was in this situation I would try to calm the victim and bullies first and foremost and gently talk to them.";
 			Lifeline[1][0] = "Cyberbullying is a serious concern that needs to be taken care of. Feeling insecure because they thought nobody will track them down and stop them from bullying can cause serious pain. you can take a stand by confronting them in person and tell them to stop their cyberbullying.";
@@ -127,19 +113,7 @@ public class GameManager : MonoBehaviour {
 			Response[2][4] = "Doing this can demoralize the person that you are filming, once they find out that their video is posted up online it can lower their self esteem and self identity. ";
 			Response[2][5] = "Taking a video of the fight and posting it on facebook would just encourage other people to watch the video for the wrong reasons. They would watch it just for the fight and then praise the person who won. The person who won would be prideful and proud of what he did and would continue doing it.";
 			Response[2][6] = "This might seem like a good thing to do, but this should only be done if it is the last resort. You first want to calm down before doing anything. By jumping into the fight you might make them think that are you allying up with the other person and they can be threatened by that.";
-			Response[2][7] = "This should be done if and only if calming the people down doesn't work. But once you jump in the fight you don't want to make the scenario worse by hurting others or getting hurt yourself. Separate the two of them and stop talking to them.";
-			CorrectAnswer[0][0] = false;
-			CorrectAnswer[0][1] = false;
-			CorrectAnswer[0][2] = true;
-			CorrectAnswer[0][3] = false;
-			CorrectAnswer[1][0] = false;
-			CorrectAnswer[1][1] = false;
-			CorrectAnswer[1][2] = false;
-			CorrectAnswer[1][3] = true;
-			CorrectAnswer[2][0] = true;
-			CorrectAnswer[2][1] = false;
-			CorrectAnswer[2][2] = false;
-			CorrectAnswer[2][3] = false;
+			Response[2][7] = "This should be done if and only if calming the people down doesn't work. But once you jump in the fight you don't want to make the scenario worse by hurting others or getting hurt yourself. Separate the two of them and stop talking to ";
 			CompletedQuests[0] = false;
 			CompletedQuests[1] = false;
 			CompletedQuests[2] = false;
@@ -206,13 +180,7 @@ public class GameManager : MonoBehaviour {
 	public static string GetResponse (int AnswerNumber) {
 		if (CurrentQuest < 0)
 			return "Error: No current quest identified, cannot find response.";
-
-		int temp = (AnswerNumber * 2) - 1;
-
-		if (selectedChar == 1)
-			return Response[CurrentQuest][temp - 1];
-		else
-			return Response[CurrentQuest][temp];
+		return QuestInfo [CurrentQuest].Answers[AnswerNumber-1].Response[selectedChar-1];
 	}
 
 	public static string GetQuest () {
@@ -230,7 +198,8 @@ public class GameManager : MonoBehaviour {
 	public static bool isCorrect (int AnswerNumber) {
 		if (CurrentQuest < 0)
 			return false;
-		return CorrectAnswer [CurrentQuest][AnswerNumber - 1];
+
+		return QuestInfo [CurrentQuest].correctAnswer == AnswerNumber;
 	}
 
 	public static bool isCompleted (int QuestID) {
